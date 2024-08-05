@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!--nav bar start-->
+    <nav class="py-1 bg-[#F5F5F5]">
+        <div class="2xl:container bg-[#F5F5F5] mx-auto">
+            <div class="w-[94%] bg-[#F5F5F5] mx-auto grid grid-cols-1 md:grid-cols-2">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/LOGO%20(4)%20(1).png?updatedAt=1722091165430" alt="logo" class="h-11">
+                        <h1 class="font-[Poppins] font-bold text-base md:text-xl">Admin Dashboard</h1>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="md:hidden flex items-center justify-end gap-1">
+                            <h1 class="font-[Poppins] font-bold text-base">Kavya S</h1>
+                            <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/user%20(1).png?updatedAt=1722093890382" alt="user" class="h-5">
+                        </div>
+                        <div class="md:hidden flex justify-end items-center gap-2" id="menu">
+                            <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/menu%20(1).png?updatedAt=1722108198124" alt="menu" class="h-5" >
+                        </div>
+                        <div class="hidden md:hidden" id="cross">
+                            <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/close%20(1).png?updatedAt=1722108198118" alt="cross" class="h-5" >
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center justify-end gap-2">
+                    <a href="./home.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/home.png?updatedAt=1722143601346" alt="home" class="h-7 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <a href="./transaction.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/transaction%20(2).png?updatedAt=1722102861835" alt="transaction" class="h-7  hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <a href="./users.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/multiple-users-silhouette%20(1).png?updatedAt=1722102361560" alt="users" class="h-7 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/bell%20(2).png?updatedAt=1722091342776" alt="bell" class="h-7  hover:border-2 border-[F5F5F5] rounded-full">
+                    <div class="flex items-center justify-end gap-2">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/user%20(1).png?updatedAt=1722093890382" alt="user" class="h-7">
+                        <h1 class="font-[Poppins] font-bold text-lg">Kavya S</h1>
+                    </div>
+                </div>
+                <div class="hidden md:hidden flex flex-col items-end justify-center gap-2" id="content">
+                    <a href="./home.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/home.png?updatedAt=1722143601346" alt="home" class="h-5 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <a href="./transaction.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/transaction%20(2).png?updatedAt=1722102861835" alt="transaction" class="h-5 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <a href="./users.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/multiple-users-silhouette%20(1).png?updatedAt=1722102361560" alt="users" class="h-5 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/bell%20(2).png?updatedAt=1722091342776" alt="bell" class="h-5 hover:border-2 border-[F5F5F5] rounded-full">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--nav bar end-->
+
+    <!--hero section start-->
+    <section class="py-1 bg-[#F5F5F5]">
+        <div class="2xl:container bg-[#F5F5F5] mx-auto">
+            <div class="w-[94%] bg-[#F5F5F5] grid grid-cols-2 md:grid-cols-2 mx-auto ">
+                <div class="bg-[#31c48d] m-2 p-2 rounded-md flex justify-center items-center gap-2">
+                    <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/throwing-trash.png?updatedAt=1722150499547" alt="bin" class="h-7 md:h-10">
+                    <p class="font-[Poppins] text-[#F5F5F5] font-bold text-xs md:text-lg">Bins Deployed :</p>
+                    <p class="font-[Poppins] font-bold bg-[#F5F5F5] rounded-lg w-8 h-7 md:w-12 md:h-10 flex justify-center items-center p-2 text-xs md:text-lg">10</p>
+                </div>
+                <div class="bg-[#31c48d] m-2 p-2 rounded-md flex justify-center items-center gap-2">
+                    <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/group.png?updatedAt=1722150581237" alt="group" class="h-7 md:h-9">
+                    <p class="font-[Poppins] text-[#F5F5F5] font-bold text-xs md:text-lg">Total Users :</p>
+                    <p class="font-[Poppins] font-bold bg-[#F5F5F5] rounded-lg w-8 h-7 md:w-12 md:h-10 flex justify-center items-center p-4  text-xs md:text-lg">1000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--hero section end-->
+
+    <!--main start-->
+    <section>
+        <div>
+            <div class="2xl:container bg-[#F5F5F5] grid grid-cols-1 lg:grid-cols-4 mx-auto gap-4">
+                <div class="w-[90%] bg-[#F5F5F5] lg:col-span-3 mx-auto space-y-4 lg:h-screen lg:overflow-auto">
+                    <div class="bg-[#F5F5F5] mx-auto">
+                        <div class="flex items-center gap-1">
+                            <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/status%20(1).png?updatedAt=1722156170378"
+                                alt="satus" class="h-8 md:h-10">
+                            <h1 class="font-[Poppins] font-bold text-base md:text-xl">Bins Status</h1>
+                        </div>
+                    </div>
+                    <div class="bg-[#F5F5F5] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 1</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin1"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 2</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin2"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 3</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin3"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 4</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin4"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 5</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin5"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 6</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin6"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 7</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin7"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 8</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin8"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 9</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin9"></canvas>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center rounded-xl border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 gap-2 bg-white">
+                            <p class="bg-[#31c48d] text-white font-bold font-[Poppins] px-4 py-2 rounded-md">BIN : 10</p>
+                            <p class="font-[Poppins] font-semibold">Location : Office</p>
+                            <canvas id="bin10"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-[80%] bg-[#F5F5F5]">
+                    <div class="bg-[#F5F5F5] flex flex-col justify-center items-center gap-4 mx-auto">
+                        <div class="space-y-4 flex flex-col items-start">
+                            <div class="flex items-center justify-center gap-1">
+                                <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/status%20(1).png?updatedAt=1722156170378"
+                                    alt="satus" class="h-7 md:h-10">
+                                <h1 class="font-[Poppins] font-bold text-sm md:text-xl">User Status</h1>
+                            </div>
+                            <div class="flex flex-col justify-center items-center bg-white border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 rounded-lg">
+                                <canvas id="newuser" ></canvas>
+                            </div>
+                        </div>
+                        <div class="space-y-4 flex flex-col items-start">
+                            <div class="flex items-center justify-center gap-1">
+                                <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/status%20(1).png?updatedAt=1722156170378"
+                                    alt="satus" class="h-7 md:h-10">
+                                <h1 class="font-[Poppins] font-bold text-sm md:text-xl">Batch Status</h1>
+                            </div>
+                            <div class="flex flex-col justify-center items-center bg-white border-[1px] border-r-8 border-b-[7px] shadow-[#31c48d] border-[#31c48d] p-2 rounded-lg mb-2">
+                                <canvas id="disposal" ></canvas>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--main end-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const menu = document.getElementById("menu")
+        const cross = document.getElementById("cross")
+        const content = document.getElementById("content")
+        menu.addEventListener("click",()=>{
+            content.classList.toggle("hidden")
+            cross.classList.toggle("hidden")
+            menu.classList.toggle("hidden") 
+        })
+        cross.addEventListener("click",()=>{
+            content.classList.toggle("hidden")
+            cross.classList.toggle("hidden")
+            menu.classList.toggle("hidden") 
+        })
+        const ctx1 = document.getElementById('bin1');
+        const ctx2 = document.getElementById('bin2');
+        const ctx3 = document.getElementById('bin3');
+        const ctx4 = document.getElementById('bin4');
+        const ctx5 = document.getElementById('bin5');
+        const ctx6 = document.getElementById('bin6');
+        const ctx7 = document.getElementById('bin7');
+        const ctx8 = document.getElementById('bin8');
+        const ctx9 = document.getElementById('bin9');
+        const ctx10 = document.getElementById('bin10');
+        const newuser = document.getElementById('newuser');
+        const disposal = document.getElementById('disposal');
+
+        new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx3, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx5, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx6, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx7, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx8, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx9, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(ctx10, {
+            type: 'doughnut',
+            data: {
+                labels: ['Filled', 'Not Filled'],
+                datasets: [{
+                    label: '# Level',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#F5F5F5'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(newuser, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb','Mar', 'Apr','May', 'Jun','Jul', 'Aug','Sep', 'Oct','Nov', 'Dec'],
+                datasets: [{
+                    label: '# New Users',
+                    data: [70, 30,70,65,50,70,68,68,70,55,58,80],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#31c48d'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        new Chart(disposal, {
+            type: 'pie',
+            data: {
+                labels: ['bronze', 'silver', 'gold'],
+                datasets: [{
+                    label: '# Users',
+                    data: [45, 30, 25],
+                    backgroundColor: [
+                        '#31c48d',
+                        '#0ab998',
+                        '#45ff99'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+        
+    </script>
+</body>
+</html>

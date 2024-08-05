@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section>
+        <div class="2xl:container bg-[#31C48D] h-screen">
+            <div class="w-[90%] bg-[#31C48D] flex flex-col items-center justify-center grid grid-cols-1 h-screen mx-auto">
+                <div class="bg-white shadow-2xl rounded-md gap-2 w-fit px-10 py-5 flex flex-col mx-auto">
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/LOGO%20(1).png?updatedAt=1722018223717" alt="logo" class="h-12">
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <h1 class="text-xl font-bold font-[Poppins]">Sign Up</h1>
+                    </div>
+                    <form action="" class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between">
+                            <label for="fn" class="text-base font-medium font-[Poppins]">Register As</label>
+                            <input type="radio" name="userType" id="radio1" class="border border-solid border-black rounded-sm ">
+                            <label for="fn" class="text-base font-medium font-[Poppins]">Admin</label>
+                            <input type="radio" name="userType" id="radio2" class="border border-solid border-black rounded-sm ">
+                            <label for="fn" class="text-base font-medium font-[Poppins]">User</label>
+
+                        </div>
+                        <div class="flex flex-col " id="secretkey">
+                            <label for="fn" class="text-base font-medium font-[Poppins]" id="secretkeytext">Secret Key</label>
+                            <input type="text" id="secretkeyinput" class="border border-solid border-black rounded-sm w-60 px-2">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="fn" class="text-base font-medium font-[Poppins]">First name</label>
+                            <input type="text" id="fn" class="border border-solid border-black rounded-sm w-60 px-2">    
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="ln" class="text-base font-medium font-[Poppins]">Last name</label>
+                            <input type="text" id="ln" class="border border-solid border-black rounded-sm w-60 px-2">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="id" class="text-base font-medium font-[Poppins]">User Id</label>
+                            <input type="text" id="id" class="border border-solid border-black rounded-sm w-60 px-2">    
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="password" class="text-base font-medium font-[Poppins]">Password</label>
+                            <input type="password" id="password" class="border border-solid border-black rounded-sm w-60 px-2">
+                        </div>
+                        <button class="font-[Poppins] bg-[#31C48D] rounded-sm text-white p-1" id="signup">Sign Up</button>
+                    </form>
+                    <div class="flex justify-center items-center gap-2">
+                        <p>Already registered</p>
+                        <a href="./index.html">
+                            <p class="font-[Poppins] underline text-blue-600 text-sm">Sign In?</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const admin = document.getElementById('radio1');
+        const user = document.getElementById('radio2');
+        const secretkey = document.getElementById('secretkeytext');
+        const secretkeytext = document.getElementById('secretkeytext');
+        const secretkeyinput = document.getElementById('secretkeyinput');
+        user.addEventListener("click",()=>{
+            secretkey.textContent = ""
+            secretkey.form[2].type="hidden"
+            console.log("user clicked")
+        })
+        admin.addEventListener("click",()=>{
+            secretkey.textContent = "Secret Key"
+            secretkey.form[2].type="text"
+            console.log("admin clicked")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!--nav bar start-->
+    <nav class="py-1 bg-[#F5F5F5] fixed top-0 w-full">
+        <div class="2xl:container bg-[#F5F5F5] mx-auto">
+            <div class="w-[94%] bg-[#F5F5F5] mx-auto grid grid-cols-1 md:grid-cols-2">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/LOGO%20(4)%20(1).png?updatedAt=1722091165430" alt="logo" class="h-11">
+                        <h1 class="font-[Poppins] font-bold text-base md:text-xl">Admin Dashboard</h1>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="md:hidden flex items-center justify-end gap-1">
+                            <h1 class="font-[Poppins] font-bold text-base">Kavya S</h1>
+                            <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/user%20(1).png?updatedAt=1722093890382" alt="user" class="h-5">
+                        </div>
+                        <div class="md:hidden flex justify-end items-center gap-2" id="menu">
+                            <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/menu%20(1).png?updatedAt=1722108198124" alt="menu" class="h-5" >
+                        </div>
+                        <div class="hidden md:hidden" id="cross">
+                            <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/close%20(1).png?updatedAt=1722108198118" alt="cross" class="h-5" >
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center justify-end gap-2">
+                    <a href="./home.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/home.png?updatedAt=1722143601346" alt="home" class="h-7 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <a href="./transaction.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/transaction%20(2).png?updatedAt=1722102861835" alt="transaction" class="h-7  hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <a href="./users.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/multiple-users-silhouette%20(1).png?updatedAt=1722102361560" alt="users" class="h-7 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/bell%20(2).png?updatedAt=1722091342776" alt="bell" class="h-7  hover:border-2 border-[F5F5F5] rounded-full">
+                    <div class="flex items-center justify-end gap-2">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/user%20(1).png?updatedAt=1722093890382" alt="user" class="h-7">
+                        <h1 class="font-[Poppins] font-bold text-lg">Kavya S</h1>
+                    </div>
+                </div>
+                <div class="hidden md:hidden flex flex-col items-end justify-center gap-2" id="content">
+                    <a href="./home.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/home.png?updatedAt=1722143601346" alt="home" class="h-5 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <a href="./transaction.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/transaction%20(2).png?updatedAt=1722102861835" alt="transaction" class="h-5 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <a href="./users.html">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/multiple-users-silhouette%20(1).png?updatedAt=1722102361560" alt="users" class="h-5 hover:border-2 border-[F5F5F5] rounded-full">
+                    </a>
+                    <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/bell%20(2).png?updatedAt=1722091342776" alt="bell" class="h-5 hover:border-2 border-[F5F5F5] rounded-full">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--nav bar end-->
+
+    <section class="py-1 bg-[#F5F5F5] overflow-auto mt-12">
+        <table class="w-[94%] mx-auto h-screen ">
+            <thead class="bg-[#31c48d] text-white border-b-2 border-gray-200">
+                <tr>
+                    <th class="p-3 text-sm font-semibold tracking-wide text-left">User Id</th>
+                    <th class="p-3 text-sm font-semibold tracking-wide text-left">Name</th>
+                    <th class="p-3 text-sm font-semibold tracking-wide text-left">User Type</th>
+                    <th class="p-3 text-sm font-semibold tracking-wide text-left">Total Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">SEC22IT080</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Kavya</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">Student</td>
+                    <td class="p-3 text-sm font-medium tracking-wide text-left">50</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        const menu = document.getElementById("menu")
+        const cross = document.getElementById("cross")
+        const content = document.getElementById("content")
+        menu.addEventListener("click",()=>{
+            content.classList.toggle("hidden")
+            cross.classList.toggle("hidden")
+            menu.classList.toggle("hidden") 
+        })
+        cross.addEventListener("click",()=>{
+            content.classList.toggle("hidden")
+            cross.classList.toggle("hidden")
+            menu.classList.toggle("hidden") 
+        })
+    </script>
+</body>
+
+</html>

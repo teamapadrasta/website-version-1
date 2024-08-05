@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+
+    <!--FireBase SDK-->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section>
+        <div class="2xl:container bg-[#31C48D] h-screen">
+            <div class="w-[90%] bg-[#31C48D] flex justify-center items-center grid grid-cols-1 h-screen mx-auto">
+                <div class="bg-white shadow-2xl rounded-md gap-2 w-fit p-10 flex flex-col mx-auto">
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="https://ik.imagekit.io/9rldi0s2f8/Apadrasta/LOGO%20(1).png?updatedAt=1722018223717"
+                            alt="logo" class="h-40">
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <h1 class="text-xl font-bold font-[Poppins]">Sign In</h1>
+                    </div>
+                    <form action="" class="flex flex-col gap-4" id="form">
+                        <div class="flex flex-col">
+                            <label for="id" class="text-base font-medium font-[Poppins]">User Id</label>
+                            <input type="" id="id" class="border border-solid border-black rounded-sm w-60 px-2">
+                            <p id="iderror"></p>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="password" class="text-base font-medium font-[Poppins]">Password</label>
+                            <input type="password" id="password"
+                                class="border border-solid border-black rounded-sm w-60 px-2">
+                            <p id="passworderror"></p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="rem">
+                            <label for="rem" class="text-base font-medium font-[Poppins]">Remember Me</label>
+                        </div>
+                        <button class="font-[Poppins] bg-[#31C48D] rounded-sm text-white p-1">Sign In</button>
+                    </form>
+                    <div class="flex flex-col items-end">
+                        <a href="./signup.html">
+                            <p class="font-[Poppins] underline text-blue-600 text-sm">Sign Up</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const form = document.getElementById("form")
+        const id = document.getElementById("id")
+        const password = document.getElementById("password")
+        const iderror = document.getElementById("iderror");
+        const passworderror = document.getElementById("passworderror");
+
+        id.addEventListener("blur", (e) => {
+            console.log(e.target.value);
+            if (e.target.value === "") {
+                iderror.textContent = "*Required";
+                iderror.style.color = "red";
+            } else {
+                iderror.textContent = "";
+            }
+        });
+
+        password.addEventListener("blur", (e) => {
+            console.log(e.target.value);
+            if (e.target.value === "") {
+                passworderror.textContent = "*Required";
+                passworderror.style.color = "red";
+            } else {
+                passworderror.textContent = "";
+            }
+        });
+
+        const validformData = (e, p) => {
+            const emailregex = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+$";
+            if (e === "") {
+                iderror.textContent = "*Required";
+                iderror.style.color = "red";
+            }
+            if (p === "") {
+                passworderror.textContent = "*Required";
+                passworderror.style.color = "red";
+            }
+            if (!e.match(emailregex)) {
+                iderror.textContent = "*Enter a valid id";
+                iderror.style.color = "red";
+            }
+        };
+
+        const saveformdata = (id, password) => {
+            const firebaseConfig = {
+                apiKey: "AIzaSyB4fGmPU10YPN5ycPi8M7CqJ0xJQLs4R9k",
+                authDomain: "credit-based-dustbin-b8d9b.firebaseapp.com",
+                databaseURL: "https://credit-based-dustbin-b8d9b-default-rtdb.asia-southeast1.firebasedatabase.app",
+                projectId: "credit-based-dustbin-b8d9b",
+                storageBucket: "credit-based-dustbin-b8d9b.appspot.com",
+                messagingSenderId: "970737384248",
+                appId: "1:970737384248:web:4bc3845a68130dd0fb5fcd"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+
+            const db = firebase.database().ref("ReqForm");
+
+            db.push({
+                id: id,
+                password: password
+            });
+        }
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            validformData(id.value, password.value);
+            saveformdata(id.value, password.value);
+        });
+    </script>
+</body>
+
+</html>
